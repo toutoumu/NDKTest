@@ -1,0 +1,24 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+Bins/
+
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+
+# Linux
+*.a
+
+# Windows
+*.exe
+
+# IDE files
+*.user
