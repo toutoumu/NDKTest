@@ -31,6 +31,20 @@ android {
     }
   }
 
+  sourceSets {
+    main {
+      jniLibs.srcDirs = ['libs']
+    }
+  }
+
+  // 解决 升级Gradle为 classpath 'com.android.tools.build:gradle:3.0.0-rc1' 引起的异常
+  //Error:Execution failed for task ':app:transformNativeLibsWithMergeJniLibsForDebug'.
+  //    > More than one file was found with OS independent path 'lib/armeabi-v7a/libfreedcam.so'
+  packagingOptions {
+    pickFirst 'lib/armeabi-v7a/libheif.so'
+  }
+
+
   buildTypes {
     release {
       minifyEnabled false

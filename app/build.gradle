@@ -9,32 +9,6 @@ android {
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-    externalNativeBuild {
-      cmake
-    }
-    ndk {
-      abiFilters "armeabi-v7a" //, "armeabi", "x86", "mips"
-    }
-  }
-
-  externalNativeBuild {
-    cmake {
-      path 'CMakeLists.txt'
-    }
-  }
-
-  sourceSets {
-    main {
-      jniLibs.srcDirs = ['../distribution/libs']
-    }
-  }
-
-  // 解决 升级Gradle为 classpath 'com.android.tools.build:gradle:3.0.0-rc1' 引起的异常
-  //Error:Execution failed for task ':app:transformNativeLibsWithMergeJniLibsForDebug'.
-  //    > More than one file was found with OS independent path 'lib/armeabi-v7a/libfreedcam.so'
-  packagingOptions {
-    pickFirst 'lib/armeabi-v7a/libnative-math.so'
   }
 
   buildTypes {

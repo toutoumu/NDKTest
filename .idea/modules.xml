@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/NDKTest.iml" filepath="$PROJECT_DIR$/NDKTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/heif/heif.iml" filepath="$PROJECT_DIR$/heif/heif.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mathlib/mathlib.iml" filepath="$PROJECT_DIR$/mathlib/mathlib.iml" />
     </modules>
   </component>
 </project>

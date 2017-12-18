@@ -1,1 +1,1 @@
-include ':app', ':mathlib', ':heif'
+include ':app', ':heif'

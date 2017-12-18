@@ -26,7 +26,7 @@ exec_program(
 string(TIMESTAMP BUILD_TIMESTAMP UTC)
 
 # Create the version number header
-configure_file("${PROJECT_SOURCE_DIR}/Srcs/buildinfo/buildinfo.hpp.in" "${PROJECT_BINARY_DIR}/buildinfo.hpp")
+configure_file("${PROJECT_SOURCE_DIR}/src/main/cpp/Srcs/buildinfo/buildinfo.hpp.in" "${PROJECT_BINARY_DIR}/buildinfo.hpp")
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
@@ -75,7 +75,7 @@ if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
 endif()
 
 # Add sub-directories that contain sources
-add_subdirectory(${PROJECT_SOURCE_DIR}/Srcs)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/main/cpp/Srcs)
 
 # Add Doxygen API documentation target
-add_subdirectory(Docs)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/main/cpp/Docs)
